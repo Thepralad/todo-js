@@ -6,7 +6,9 @@ function addTask(value){
 function showTask(){
     Tasks.showTasks()
 }
-
+function removeTask(value){
+    Tasks.removeTaskFromStorage(value);
+}
 export{
-    addTask, showTask
+    addTask, showTask, removeTask
 }
