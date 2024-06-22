@@ -1,3 +1,8 @@
-const myH1 = document.createElement('h1');
-myH1.textContent = 'Todo-Nigga';
-document.body.appendChild(myH1);
+import createTask from "./tasksModule";
+import {addTask} from "./tasks"
+import { showTask } from "./tasks";
+
+
+const task1 = createTask(123);
+addTask(task1);
+showTask();
