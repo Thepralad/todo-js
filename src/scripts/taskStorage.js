@@ -1,5 +1,5 @@
 const Tasks = (function(){
-    let tasks = new Array();
+    let tasks = [];
     
     return{
         addTaskToStorage: function(value){
@@ -9,12 +9,14 @@ const Tasks = (function(){
         },
         removeTaskFromStorage: function(value){
             window.localStorage.removeItem(`${value.title}`);
-        },
-        showTasks: function(){
-            for (const task of tasks) {
-                console.log(task.title);
+            const index = tasks.indexOf(value);
+            console.log(index);
+            if(index !== -1){
+                tasks.splice(index, 1);
             }
-        }
+            
+        },
+       tasks,
     }
 })();
 
