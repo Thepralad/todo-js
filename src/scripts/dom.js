@@ -14,16 +14,7 @@ function domManupulator(value){
     
     document.body.appendChild(task);
 }
-function inputTaskToDom(value, arr){
-    const addBtn = document.getElementById('submit');
-    addBtn.addEventListener('click', function(e){
-        const titleV = document.getElementById('title').value;
-        const dueDateV = document.getElementById('dueDate').value;
-        const priorityV = document.getElementById('priority').value;
-        arr.push({titleV, dueDateV, priorityV})
-        e.preventDefault();
-    })
-}
+
 export {
-    domManupulator, inputTaskToDom
+    domManupulator
 }
