@@ -1,5 +1,5 @@
-import domManupulator from "./dom";
 import { Tasks } from "./taskStorage";
+import { domManupulator } from "./dom";
 
 export default function addTaskToDom(){
     Tasks.tasks.reverse();
