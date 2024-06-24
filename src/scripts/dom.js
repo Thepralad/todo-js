@@ -1,4 +1,4 @@
-export default function domManupulator(value){
+function domManupulator(value){
     const title = document.createElement('h3');
     const dueDate = document.createElement('p');
     const priority = document.createElement('p');
@@ -13,4 +13,17 @@ export default function domManupulator(value){
     task.appendChild(priority);
     
     document.body.appendChild(task);
+}
+function inputTaskToDom(value, arr){
+    const addBtn = document.getElementById('submit');
+    addBtn.addEventListener('click', function(e){
+        const titleV = document.getElementById('title').value;
+        const dueDateV = document.getElementById('dueDate').value;
+        const priorityV = document.getElementById('priority').value;
+        arr.push({titleV, dueDateV, priorityV})
+        e.preventDefault();
+    })
+}
+export {
+    domManupulator, inputTaskToDom
 }
