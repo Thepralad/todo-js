@@ -3,9 +3,8 @@ const Tasks = (function(){
     
     return{
         addTaskToStorage: function(value){
-            tasks.push(value);
             window.localStorage.setItem(`${value.title}`, JSON.stringify(value));
-    
+            tasks.push(JSON.parse(window.localStorage.getItem(`${value.title}`)));
         },
         removeTaskFromStorage: function(value){
             window.localStorage.removeItem(`${value.title}`);
